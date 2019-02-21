@@ -50,7 +50,35 @@
     FYI that this is a comment, too
     but it can be on more then one line
     */
+
+    console.log("We are building functions")
     
+    // Function to square numbers
+    function makeSquare(theNumb) {
+      let squared = theNumb * theNumb;
+      return squared;
+    }
+
+    console.log(makeSquare(3));
+    console.log(makeSquare(17));
+
+    let square98 = makeSquare(98);
+    console.log(square98);
+
+    // Function to write full name
+    function makeFullName(firstName, middleName, lastName) {
+      let fullName = firstName + " " + middleName + " " + lastName;
+      return fullName;
+    }
+    
+    console.log(makeFullName("Peyton", "Kalani", "Young"));
+    console.log(makeFullName("Hannah", "Kealohilani", "Young"));
+    console.log(makeFullName("Robert", "\"Beto\"", "O\'Rourke"));
+
+    let fullNameReturn = makeFullName("Peyton", "Kalani", "Young");
+    console.log(fullNameReturn.length);
+    console.log(fullNameReturn.toUpperCase());
+
     </script>
 </body>
 </html>
