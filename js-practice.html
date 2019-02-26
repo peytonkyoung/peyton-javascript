@@ -12,7 +12,7 @@
     // This is a comment
     let somecode = 'this code';
     
-    console.log("Let\'s do math");
+    console.log('Let\'s do math');
 
     let x = 5;
     console.log(x);
@@ -33,17 +33,17 @@
     let divAnswer = x / y;
     console.log(divAnswer);
 
-    console.log("Working with strings:");
+    console.log('Working with strings:');
 
-    let firstName = "Peyton";
-    let middleName = "Kalani";
-    let lastName = "Young";
+    let firstName = 'Peyton';
+    let middleName = 'Kalani';
+    let lastName = 'Young';
 
-    let name = firstName + " " + middleName + " " + lastName;
+    let name = firstName + ' ' + middleName + ' ' + lastName;
     console.log(name);
 
     // Strings on my own
-    let greeting = "My name is " + name;
+    let greeting = 'My name is ' + name;
     console.log(greeting);
 
     /*
@@ -51,7 +51,7 @@
     but it can be on more then one line
     */
 
-    console.log("We are building functions")
+    console.log('We are building functions')
     
     // Function to square numbers
     function makeSquare(theNumb) {
@@ -67,17 +67,51 @@
 
     // Function to write full name
     function makeFullName(firstName, middleName, lastName) {
-      let fullName = firstName + " " + middleName + " " + lastName;
+      let fullName = firstName + ' ' + middleName + ' ' + lastName;
       return fullName;
     }
     
-    console.log(makeFullName("Peyton", "Kalani", "Young"));
-    console.log(makeFullName("Hannah", "Kealohilani", "Young"));
-    console.log(makeFullName("Robert", "\"Beto\"", "O\'Rourke"));
+    console.log(makeFullName('Peyton', 'Kalani', 'Young'));
+    console.log(makeFullName('Hannah', 'Kealohilani', 'Young'));
+    console.log(makeFullName('Robert', '\"Beto\"', 'O\'Rourke'));
 
-    let fullNameReturn = makeFullName("Peyton", "Kalani", "Young");
+    let fullNameReturn = makeFullName('Peyton', 'Kalani', 'Young');
     console.log(fullNameReturn.length);
     console.log(fullNameReturn.toUpperCase());
+
+
+    console.log('Making a better name function');
+
+    // Make a name with middle initial
+    function makeBetterName(firstName, middleName, lastName) {
+      if (middleName.length === 1) {
+        middleName = middleName + '.';
+        let fullName = firstName + ' ' + middleName + ' ' + lastName;
+        return fullName;
+      } else {
+        let fullName = firstName + ' ' + middleName + ' ' + lastName;
+        return fullName;
+      }
+    }
+
+    console.log(makeBetterName("Joan", "Marie", "Larkin"));
+    console.log(makeBetterName("Donald", "F", "Trump"));
+
+
+    // Function to find winning team
+    function makeScore(homeScore, awayScore) {
+      if (homeScore > awayScore) {
+        return ('The home team won.');
+      } else if (homeScore < awayScore) {
+        return ('The away team won.');
+      } else {
+        return ('There was a tie.');
+      }
+    }
+
+    console.log(makeScore(9, 4));
+    console.log(makeScore(3, 11));
+    console.log(makeScore(7, 7));
 
     </script>
 </body>
