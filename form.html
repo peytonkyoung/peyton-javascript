@@ -19,19 +19,19 @@
 
   <script>
     function makeBetterName() {
+
       let fName = document.getElementById("nameForm").first.value;
       let mName = document.getElementById("nameForm").middle.value;
       let lName = document.getElementById("nameForm").last.value;
 
       if (mName.length === 1) {
         let fullName = fName + " " + mName + ". " + lName;
-        return fullName;
+        document.getElementById("name").innerHTML = fullName;
       } else {
         let fullName = fName + " " + mName + " " + lName;
         document.getElementById("name").innerHTML = fullName;
       }
     }
-    console.log(makeBetterName());
 
   </script>
 
